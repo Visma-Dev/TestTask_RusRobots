@@ -16,5 +16,9 @@ $APPLICATION->IncludeComponent("bitrix:main.map", ".default", Array(
 	"CACHE_TIME"	=>	"36000000"
 	)
 );
+?>
 
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<h2>404</h2>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
