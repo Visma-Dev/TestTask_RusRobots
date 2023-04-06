@@ -15,14 +15,14 @@ $asset->addCss(SITE_TEMPLATE_PATH . '/assets/fonts/flaticon/font/flaticon.css');
 $asset->addCss(SITE_TEMPLATE_PATH . '/assets/css/style.css');
 
 //Подключение js
-$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.2.1.min.js');
-$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery-migrate-3.0.0.js');
-$asset->addJs(SITE_TEMPLATE_PATH . '/js/popper.min.js');
-$asset->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');
-$asset->addJs(SITE_TEMPLATE_PATH . '/js/owl.carousel.min.js');
-$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery.waypoints.min.js');
-$asset->addJs(SITE_TEMPLATE_PATH . '/js/jquery.stellar.min.js');
-$asset->addJs(SITE_TEMPLATE_PATH . '/js/main.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery-3.2.1.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery-migrate-3.0.0.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/js/popper.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/js/bootstrap.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/js/owl.carousel.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.waypoints.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/js/jquery.stellar.min.js');
+$asset->addJs(SITE_TEMPLATE_PATH . '/assets/js/main.js');
 
 //Подключение шрифтов
 $asset->addString('<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300, 400,700" rel="stylesheet">');
