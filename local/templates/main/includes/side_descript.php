@@ -1,0 +1,1 @@
+A novice Backend developer. I have experience in OOP development, working with databases, creating git repositories and composer packages.
