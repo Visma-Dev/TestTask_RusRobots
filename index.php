@@ -36,7 +36,7 @@ $APPLICATION->SetTitle('Главная');
         ),
         "FILTER_NAME" => "",
         "HIDE_LINK_WHEN_NO_DETAIL" => "N",
-        "IBLOCK_ID" => "1",
+        "IBLOCK_ID" => getIdByCode('main-slider'),// Функция для вывода id и-блока по символьному коду.
         "IBLOCK_TYPE" => "content",
         "INCLUDE_IBLOCK_INTO_CHAIN" => "N",
         "INCLUDE_SUBSECTIONS" => "N",
