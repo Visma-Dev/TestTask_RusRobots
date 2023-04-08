@@ -1,4 +1,4 @@
-<?
+<?php
 $aMenuLinks = [
 	[
 		"Home",
@@ -8,7 +8,7 @@ $aMenuLinks = [
 		"",
 	],
     [
-        "Categories",
+        "Vlad",
         "/category/",
         [],
         [],
@@ -29,4 +29,3 @@ $aMenuLinks = [
         "",
     ],
 ];
-?>
