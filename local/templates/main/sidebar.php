@@ -1,4 +1,5 @@
-<?
+<?php
+
 if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     die();
 ?>
@@ -17,7 +18,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <div class="bio text-center">
 
             <!-- Вкл.область Фото -->
-            <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+            <?php $APPLICATION->IncludeComponent("bitrix:main.include", "", [
                 "AREA_FILE_SHOW" => "file",
                 "PATH" => SITE_TEMPLATE_PATH . "/includes/about_photo.php",
             ]); ?>
@@ -25,7 +26,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
                 <!-- Вкл.область Имени -->
                 <h2>
-                    <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+                    <?php $APPLICATION->IncludeComponent("bitrix:main.include", "", [
                         "AREA_FILE_SHOW" => "file",
                         "PATH" => SITE_TEMPLATE_PATH . "/includes/about_name.php",
                     ]); ?>
@@ -33,7 +34,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
                 <!-- Вкл.область Краткого описания -->
                 <p>
-                <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+                <?php $APPLICATION->IncludeComponent("bitrix:main.include", "", [
                     "AREA_FILE_SHOW" => "file",
                     "PATH" => SITE_TEMPLATE_PATH . "/includes/side_descript.php",
                 ]); ?>
@@ -42,7 +43,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                 <!-- Вкл.область текста кнопки -->
                 <p>
                     <a href="/about" class="btn btn-primary btn-sm">
-                        <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+                        <?php $APPLICATION->IncludeComponent("bitrix:main.include", "", [
                             "AREA_FILE_SHOW" => "file",
                             "PATH" => SITE_TEMPLATE_PATH . "/includes/side_button.php",
                         ]); ?>
@@ -51,7 +52,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 
                 <!-- Вкл.область Соц-сетей -->
                 <p class="social">
-                    <? $APPLICATION->IncludeComponent("bitrix:main.include", "", [
+                    <?php $APPLICATION->IncludeComponent("bitrix:main.include", "", [
                         "AREA_FILE_SHOW" => "file",
                         "PATH" => SITE_TEMPLATE_PATH . "/includes/side_social.php",
                     ]); ?>

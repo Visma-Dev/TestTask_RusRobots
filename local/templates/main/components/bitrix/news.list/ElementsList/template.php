@@ -19,9 +19,8 @@ $rsSections = CIBlockSection::GetList(
         [],
         ['IBLOCK_ID' => $arParams ['IBLOCK_ID'], 'CODE' => $arResult['VARIABLES']['SECTION_CODE']]
 );
-?>
 
-<?php if (!empty($arResult["ITEMS"])): ?>
+if (!empty($arResult["ITEMS"])): ?>
     <section class="site-section">
         <div class="container">
             <div class="row mb-4">

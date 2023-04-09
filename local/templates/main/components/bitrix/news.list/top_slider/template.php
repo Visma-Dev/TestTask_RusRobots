@@ -1,4 +1,6 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<?php
+
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -11,8 +13,9 @@
 /** @var string $componentPath */
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
-?>
-<?php if (!empty($arResult['ITEMS'])): ?>
+
+
+if (!empty($arResult['ITEMS'])): ?>
     <section class="site-section pt-5">
         <div class="container">
             <div class="row">

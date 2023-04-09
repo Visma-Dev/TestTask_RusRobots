@@ -1,8 +1,10 @@
-<?
-if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
-	die();
+<?php
+
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
+    die();
 
 use Bitrix\Main\Page\Asset;
+
 $asset = Asset::getInstance();
 
 //Подключение css
@@ -32,16 +34,16 @@ $asset->addString('<link href="https://fonts.googleapis.com/css?family=Josefin+S
 <html lang="en">
 <head>
     <!--  Вывод всех файлов, добавленных через api -->
-    <?=$APPLICATION->ShowHead();?>
+    <?php $APPLICATION->ShowHead(); ?>
 
     <!-- Вывод заголовка из параметров -->
-    <title><?=$APPLICATION->ShowTitle();?></title>
+    <title><?php $APPLICATION->ShowTitle(); ?></title>
 </head>
 <body>
 
 <div id="panel">
     <!-- Вывод админ-панели -->
-    <?=$APPLICATION->ShowPanel();?>
+    <?= $APPLICATION->ShowPanel(); ?>
 </div>
 
 <header role="banner">
@@ -65,25 +67,26 @@ $asset->addString('<link href="https://fonts.googleapis.com/css?family=Josefin+S
     <div class="container logo-wrap">
         <div class="row pt-5">
             <div class="col-12 text-center">
-                <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
+                <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button"
+                   aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
                 <h1 class="site-logo"><a href="/">Task from Rus. Robotics</a></h1>
             </div>
         </div>
     </div>
 
     <!--Подключение компонента верхнего меню -->
-    <? $APPLICATION->IncludeComponent("bitrix:menu", "top_menu", [
-        "ALLOW_MULTI_SELECT"    => "N",
-        "CHILD_MENU_TYPE"       => "left",
-        "DELAY"                 => "N",
-        "MAX_LEVEL"             => "2",
-        "MENU_CACHE_GET_VARS"   => array(),
-        "MENU_CACHE_TIME"       => "3600",
-        "MENU_CACHE_TYPE"       => "N",
+    <?php $APPLICATION->IncludeComponent("bitrix:menu", "top_menu", [
+        "ALLOW_MULTI_SELECT" => "N",
+        "CHILD_MENU_TYPE" => "left",
+        "DELAY" => "N",
+        "MAX_LEVEL" => "2",
+        "MENU_CACHE_GET_VARS" => array(),
+        "MENU_CACHE_TIME" => "3600",
+        "MENU_CACHE_TYPE" => "N",
         "MENU_CACHE_USE_GROUPS" => "N",
-        "ROOT_MENU_TYPE"        => "top",
-        "USE_EXT"               => "N",
-        "COMPONENT_TEMPLATE"    => "top_menu"
+        "ROOT_MENU_TYPE" => "top",
+        "USE_EXT" => "N",
+        "COMPONENT_TEMPLATE" => "top_menu"
     ], false); ?>
 
 </header>

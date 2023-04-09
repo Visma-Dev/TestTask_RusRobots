@@ -1,4 +1,6 @@
-<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
+<?php
+
+if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 <?php if (!empty($arResult)): ?>
     <nav class="navbar navbar-expand-md  navbar-light bg-light">

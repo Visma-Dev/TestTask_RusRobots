@@ -40,7 +40,7 @@ $APPLICATION->IncludeComponent("bitrix:news", "categories", array(
     "DISPLAY_PREVIEW_TEXT" => "Y",    // Выводить текст анонса
     "DISPLAY_TOP_PAGER" => "N",    // Выводить над списком
     "HIDE_LINK_WHEN_NO_DETAIL" => "N",    // Скрывать ссылку, если нет детального описания
-    "IBLOCK_ID" => "2",    // Инфоблок
+    "IBLOCK_ID" => getIdByCode('articles'),// Функция для вывода id и-блока по символьному коду.
     "IBLOCK_TYPE" => "content",    // Тип инфоблока
     "INCLUDE_IBLOCK_INTO_CHAIN" => "N",    // Включать инфоблок в цепочку навигации
     "LIST_ACTIVE_DATE_FORMAT" => "f j, Y",    // Формат показа даты
