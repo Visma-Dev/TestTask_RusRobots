@@ -23,10 +23,12 @@ if (!empty($arResult['ITEMS'])): ?>
                     <div class="owl-carousel owl-theme home-slider">
 
                         <?php foreach ($arResult['ITEMS'] as $arItem): ?>
+
+
                             <div>
                                 <!-- Вывод фото и ссылки -->
-                                <?php if (!empty($arItem['PREVIEW_PICTURE']['SRC'])): ?>
-                                <a href="<?= $arItem['PROPERTIES']['LINK']['VALUE'] ?>"
+                                <?php if (!empty($arItem['DETAIL_PAGE_URL'])): ?>
+                                <a href="<?= $arItem['DETAIL_PAGE_URL'] ?>"
                                    class="a-block d-flex align-items-center height-lg"
                                    style="background-image: url(<?= $arItem['PREVIEW_PICTURE']['SRC']; ?>); ">
                                     <?php endif; ?>
@@ -34,19 +36,25 @@ if (!empty($arResult['ITEMS'])): ?>
                                     <div class="text half-to-full">
                                         <div class="post-meta">
 
+                                            <?php //Получаем название категории
+                                            $res = CIBlockSection::GetByID($arItem['IBLOCK_SECTION_ID']);
+                                            $ar_res = $res->GetNext();
+                                            $arItem['SECTION_NAME'] = $ar_res['NAME'];
+                                            ?>
                                             <!-- Вывод категории -->
-                                            <?php if (!empty($arItem['PROPERTIES']['CATEGORY'])): ?>
-                                                <span class="category"><?= $arItem['PROPERTIES']['CATEGORY']['VALUE']; ?></span>
+                                            <?php if (!empty($arItem['SECTION_NAME'])): ?>
+                                                <span class="category"><?= $arItem['SECTION_NAME']; ?></span>
                                             <?php endif; ?>
 
                                             <!-- Вывод даты создания -->
                                             <?php if (!empty($arItem['PREVIEW_PICTURE']['TIMESTAMP_X'])): ?>
                                                 <span class="mr-2"><?= (FormatDate("d F Y", $arItem['PREVIEW_PICTURE']['TIMESTAMP_X'])); ?></span>
                                             <?php endif; ?>
+
                                         </div>
                                         <!-- Вывод названия и описания -->
                                         <h3><?= isset($arItem['NAME']) ? $arItem['NAME'] : ''; ?></h3>
-                                        <p><?= isset($arItem['PREVIEW_TEXT']) ? $arItem['PREVIEW_TEXT'] : ''; ?></p>
+                                        <p><?= isset($arItem['PREVIEW_TEXT']) ? substr($arItem['PREVIEW_TEXT'],0, 150) : ''; ?></p>
                                     </div>
                                 </a>
                             </div>
