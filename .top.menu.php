@@ -8,7 +8,7 @@ $aMenuLinks = [
 		"",
 	],
     [
-        "Vlad",
+        "Categories",
         "/categories/",
         [],
         [],
